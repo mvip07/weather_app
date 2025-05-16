@@ -1,4 +1,4 @@
-const APIBASE = "https://api.openweathermap.org/data/2.5";
+const APIBASE = "https://api.openweathermap.org/data/3.0";
 const APIKEY = "20cda0e6977334e2a68462c27fdc88df";
 const GEO = navigator.geolocation
 
@@ -16,7 +16,7 @@ GEO.getCurrentPosition((position) => {
     const { longitude, latitude } = position.coords
 
     if (longitude && latitude) {
-        fetch(`${APIBASE}/onecall?lat=${latitude}&lon=${longitude}&exclude=current&appid=${APIKEY}&units=metric`)
+        fetch(`${APIBASE}/onecall?lat=${latitude}&lon=${longitude}&exclude=current&appid=${APIKEY}`)
             .then((res) => res.json())
             .then((res) => {
                 JoinWeather(res)
