@@ -1,5 +1,5 @@
 const APIBASE = "https://api.openweathermap.org/data/2.5";
-const APIKEY = "de3ae2261305416619b29ff9f5edc781";
+const APIKEY = "20cda0e6977334e2a68462c27fdc88df";
 const GEO = navigator.geolocation
 
 function weakUp() {
